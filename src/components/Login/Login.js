@@ -24,13 +24,17 @@ export const Login = () => {
     localStorage.setItem('localStoragePassword', password)
   }, [email, password])
 
+  useEffect(() => {
+    if (localStorage.getItem('localStorageEmail') === 'frontend@isawesome.com' && localStorage.getItem('localStoragePassword') === 'cool') alert('GG, Welcome, Frontender!')
+  }, [])
+
 
   // A handler to check if email and password input value === to the data in fake api
   const submitHandler = async (e) => {
     e.preventDefault()
     const response = await fetch ('/api/login')
     const data = await response.json()
-    email === data.email && password === data.password ? alert('YEAH') : alert('NAH')
+    email === data.email && password === data.password ? alert('YEAH, you signed in!') : alert('NAH, wrong credentials, mate!')
   }
 
   return (

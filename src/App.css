@@ -5,5 +5,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: radial-gradient(circle, rgb(109, 74, 112), rgb(50, 15, 52));
+  background-image: radial-gradient(circle, #6d4a70, #3b1f3e);
 }
